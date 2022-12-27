@@ -1,13 +1,12 @@
-def solution(price):
-
-    if 300000 > price > 100000:
-        price*=0.95
-    elif 500000 > price > 300000:
-        price *= 0.9
-    elif price > 500000:
-        price *= 0.8
-
+def solution(price: int) -> int:
+    if price >= 500000:
+        return int(price * 0.8)
+    if price >= 300000:
+        return int(price * 0.9)
+    if price >= 100000:
+        return int(price * 0.95)
     return price
 
-price = 580000
-solution(price)
+if __name__ == '__main__':
+    print(solution(150000))
+    print(solution(580000))
