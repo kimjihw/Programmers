@@ -9,6 +9,7 @@ def solution(id_pw, db):
     elif id_pw[0] == db[idx][0] and id_pw[1] != db[idx][1]:
         answer = "wrong pw"
     else:
+    
         answer = "fail"
     return answer
 
